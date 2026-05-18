@@ -1,52 +1,426 @@
 [
   {
-    "id": "lab_001",
-    "nome": "Pittura su Stoffa",
+    "id": "lab_035",
+    "nome": "Stendardo",
     "fascia": "elementari",
     "settimana": 1,
     "giorno": "lun",
-    "descrizione": "Creiamo magliette colorate con tecniche di pittura e stencil. Portare molta creatività!",
-    "materiali": ["Magliette bianche", "Colori acrilici", "Pennelli", "Grembiuli"],
+    "descrizione": "Disegnare uno stendardo per la squadra",
+    "materiali": [
+      "Cartellone",
+      "Pennarelli"
+    ],
     "categoria": "Art & Craft"
   },
   {
-    "id": "lab_002",
-    "nome": "Olimpiadi",
+    "id": "lab_001",
+    "nome": "Presentazione",
     "fascia": "elementari",
     "settimana": 1,
     "giorno": "mar",
-    "descrizione": "Giochi sportivi a squadre con percorsi ad ostacoli.",
-    "materiali": ["Conetti", "Corda", "Palloni", "Fischietto"],
+    "descrizione": "",
+    "materiali": [],
+    "categoria": ""
+  },
+  {
+    "id": "lab_002",
+    "nome": "Giochi",
+    "fascia": "medie",
+    "settimana": 1,
+    "giorno": "mar",
+    "descrizione": "",
+    "materiali": [],
     "categoria": "Sport/Gioco"
   },
   {
     "id": "lab_003",
-    "nome": "Masterchef",
-    "fascia": "medie",
+    "nome": "Giochi",
+    "fascia": "elementari",
     "settimana": 1,
     "giorno": "mer",
-    "descrizione": "Preparazione di biscotti decorati e dolcetti freddi.",
-    "materiali": ["Farina", "Zucchero", "Cioccolato", "Ciotole", "Matterelli"],
-    "categoria": "Cucina"
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
   },
   {
     "id": "lab_004",
-    "nome": "Teatro e Improvvisazione",
-    "fascia": "medie",
-    "settimana": 2,
-    "giorno": "gio",
-    "descrizione": "Esercizi di improvvisazione teatrale e scenette comiche.",
-    "materiali": ["Costumi vari", "Oggetti di scena", "Copioni"],
-    "categoria": "Espressione"
+    "nome": "Totenge",
+    "fascia": "elementari",
+    "settimana": 1,
+    "giorno": "mer",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
   },
   {
     "id": "lab_005",
-    "nome": "Torneo di Calcetto",
+    "nome": "Gita",
+    "fascia": "medie",
+    "settimana": 1,
+    "giorno": "mer",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_006",
+    "nome": "Gita",
+    "fascia": "elementari",
+    "settimana": 1,
+    "giorno": "ven",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_007",
+    "nome": "Gita",
+    "fascia": "elementari",
+    "settimana": 2,
+    "giorno": "lun",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_008",
+    "nome": "Torneo Finito",
+    "fascia": "medie",
+    "settimana": 2,
+    "giorno": "lun",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_009",
+    "nome": "Torneo Finito",
+    "fascia": "elementari",
+    "settimana": 2,
+    "giorno": "mar",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_010",
+    "nome": "Giuda",
+    "fascia": "medie",
+    "settimana": 2,
+    "giorno": "mar",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_011",
+    "nome": "Origami",
+    "fascia": "elementari",
+    "settimana": 2,
+    "giorno": "mer",
+    "descrizione": "Fare delle figure con i fogli",
+    "materiali": [
+      "Fogli colorati"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_012",
+    "nome": "Sale Colorato",
+    "fascia": "medie",
+    "settimana": 2,
+    "giorno": "mer",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_013",
+    "nome": "Sale Colorato",
+    "fascia": "elementari",
+    "settimana": 2,
+    "giorno": "gio",
+    "descrizione": "Fare colorare il sale con i gessetti ai bambini",
+    "materiali": [
+      "Sale iodato fino",
+      "Gessetti"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_014",
+    "nome": "Fast Fashion",
+    "fascia": "medie",
+    "settimana": 2,
+    "giorno": "gio",
+    "descrizione": "Maglie bianche che vengono colorate dai bambini come vogliono loro",
+    "materiali": [
+      "Maglie bianche",
+      "Colori"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_015",
+    "nome": "Maschere",
     "fascia": "elementari",
     "settimana": 2,
     "giorno": "ven",
-    "descrizione": "Mega torneo finale della settimana per le elementari.",
-    "materiali": ["Palloni", "Casacche colorate", "Tabellone punti"],
+    "descrizione": "Colorare le maschere ai bambini e poi attaccare i bastoncini con la colla a caldo (animatori)",
+    "materiali": [
+      "Disegni stampati",
+      "Bastoncini",
+      "Colla a caldo",
+      "Scotch",
+      "Pennarelli"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_016",
+    "nome": "Gioco della Piducia",
+    "fascia": "medie",
+    "settimana": 2,
+    "giorno": "ven",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_017",
+    "nome": "Gita",
+    "fascia": "elementari",
+    "settimana": 3,
+    "giorno": "lun",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_018",
+    "nome": "Gita",
+    "fascia": "medie",
+    "settimana": 3,
+    "giorno": "lun",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_019",
+    "nome": "Palla Antistress",
+    "fascia": "elementari",
+    "settimana": 3,
+    "giorno": "mar",
+    "descrizione": "Mettere la farina con l'aiuto dell'imbuto nel palloncino, farsi aiutare dagli animatori",
+    "materiali": [
+      "Palloncini",
+      "Farina",
+      "Imbuto"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_020",
+    "nome": "Cucina (Pane)",
+    "fascia": "medie",
+    "settimana": 3,
+    "giorno": "mar",
+    "descrizione": "Cucinare il pane",
+    "materiali": [
+      "Farina",
+      "Sale",
+      "Acqua",
+      "Pellicola",
+      "Olio",
+      "Carta da forno"
+    ],
+    "categoria": "Cucina"
+  },
+  {
+    "id": "lab_021",
+    "nome": "Mandala",
+    "fascia": "elementari",
+    "settimana": 3,
+    "giorno": "mer",
+    "descrizione": "Farle colorare ai bambini",
+    "materiali": [
+      "Stampe",
+      "Pennarelli"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_022",
+    "nome": "Impostore",
+    "fascia": "medie",
+    "settimana": 3,
+    "giorno": "mer",
+    "descrizione": "Dei bambini hanno la stessa parola e uno non la sa e tutti quelli che hanno la parola devono capire chi è l'impostore",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_023",
+    "nome": "Ovetti di Polistirolo",
+    "fascia": "elementari",
+    "settimana": 3,
+    "giorno": "gio",
+    "descrizione": "Farli colorare ai bambini",
+    "materiali": [
+      "Ovetti di polistirolo",
+      "Pennarelli"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_024",
+    "nome": "Torneo di Biliardino",
+    "fascia": "medie",
+    "settimana": 3,
+    "giorno": "gio",
+    "descrizione": "Torneo di biliardino 2vs2 e Ping pong 1vs1",
+    "materiali": [
+      "Biliardini",
+      "Campi da Ping pong"
+    ],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_025",
+    "nome": "DAS",
+    "fascia": "elementari",
+    "settimana": 3,
+    "giorno": "ven",
+    "descrizione": "Fare piccoli animali a loro scelta",
+    "materiali": [
+      "DAS"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_026",
+    "nome": "Nichi",
+    "fascia": "medie",
+    "settimana": 3,
+    "giorno": "ven",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_027",
+    "nome": "Gita",
+    "fascia": "elementari",
+    "settimana": 4,
+    "giorno": "lun",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_028",
+    "nome": "Gita",
+    "fascia": "medie",
+    "settimana": 4,
+    "giorno": "lun",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_029",
+    "nome": "Mani Ritagliate",
+    "fascia": "elementari",
+    "settimana": 4,
+    "giorno": "mar",
+    "descrizione": "Disegnare le proprie mani e colorarle",
+    "materiali": [
+      "Fogli",
+      "Pennarelli"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_030",
+    "nome": "Cucina (Biscotti)",
+    "fascia": "medie",
+    "settimana": 4,
+    "giorno": "mar",
+    "descrizione": "Cucinare i biscotti",
+    "materiali": [
+      "Farina",
+      "Sale",
+      "Acqua",
+      "Pellicola",
+      "Olio",
+      "Carta da forno",
+      "Scaglie di cioccolato"
+    ],
+    "categoria": "Cucina"
+  },
+  {
+    "id": "lab_031",
+    "nome": "Omino con le Braccia che si Muovono",
+    "fascia": "elementari",
+    "settimana": 4,
+    "giorno": "mer",
+    "descrizione": "Con aiuto degli animatori",
+    "materiali": [
+      "Cartoncini",
+      "Fermacampioni"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_032",
+    "nome": "Logo",
+    "fascia": "medie",
+    "settimana": 4,
+    "giorno": "mer",
+    "descrizione": "Ci si divide a coppie, ognuno ha un foglio con 3 domande, si risponde, ci si scambia il foglio e in base alle risposte ognuno disegna un logo su come vede l'altro",
+    "materiali": [
+      "Fogli",
+      "Pennarelli"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_033",
+    "nome": "Letterine Animatori",
+    "fascia": "elementari",
+    "settimana": 4,
+    "giorno": "gio",
+    "descrizione": "Scrivere letterine per gli animatori",
+    "materiali": [
+      "Fogli",
+      "Pennarelli",
+      "Penne"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_034",
+    "nome": "Letterine Animatori",
+    "fascia": "medie",
+    "settimana": 4,
+    "giorno": "gio",
+    "descrizione": "Scrivere letterine per gli animatori",
+    "materiali": [
+      "Fogli",
+      "Pennarelli",
+      "Penne"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_036",
+    "nome": "Indovina Chi",
+    "fascia": "medie",
+    "settimana": 4,
+    "giorno": "ven",
+    "descrizione": "Indovina chi è la persona dalle domande",
+    "materiali": [],
     "categoria": "Sport/Gioco"
   }
 ]
