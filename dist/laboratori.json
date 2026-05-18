@@ -1,0 +1,52 @@
+[
+  {
+    "id": "lab_001",
+    "nome": "Pittura su Stoffa",
+    "fascia": "elementari",
+    "settimana": 1,
+    "giorno": "lun",
+    "descrizione": "Creiamo magliette colorate con tecniche di pittura e stencil. Portare molta creatività!",
+    "materiali": ["Magliette bianche", "Colori acrilici", "Pennelli", "Grembiuli"],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_002",
+    "nome": "Olimpiadi",
+    "fascia": "elementari",
+    "settimana": 1,
+    "giorno": "mar",
+    "descrizione": "Giochi sportivi a squadre con percorsi ad ostacoli.",
+    "materiali": ["Conetti", "Corda", "Palloni", "Fischietto"],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_003",
+    "nome": "Masterchef",
+    "fascia": "medie",
+    "settimana": 1,
+    "giorno": "mer",
+    "descrizione": "Preparazione di biscotti decorati e dolcetti freddi.",
+    "materiali": ["Farina", "Zucchero", "Cioccolato", "Ciotole", "Matterelli"],
+    "categoria": "Cucina"
+  },
+  {
+    "id": "lab_004",
+    "nome": "Teatro e Improvvisazione",
+    "fascia": "medie",
+    "settimana": 2,
+    "giorno": "gio",
+    "descrizione": "Esercizi di improvvisazione teatrale e scenette comiche.",
+    "materiali": ["Costumi vari", "Oggetti di scena", "Copioni"],
+    "categoria": "Espressione"
+  },
+  {
+    "id": "lab_005",
+    "nome": "Torneo di Calcetto",
+    "fascia": "elementari",
+    "settimana": 2,
+    "giorno": "ven",
+    "descrizione": "Mega torneo finale della settimana per le elementari.",
+    "materiali": ["Palloni", "Casacche colorate", "Tabellone punti"],
+    "categoria": "Sport/Gioco"
+  }
+]
