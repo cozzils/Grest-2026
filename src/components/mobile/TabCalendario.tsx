@@ -58,7 +58,7 @@ export const TabCalendario: React.FC<TabCalendarioProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.15 }}
-                className="absolute left-0 right-0 mt-2 bg-slate-850 border border-slate-700/85 rounded-xl shadow-2xl overflow-hidden z-20"
+                className="absolute left-0 right-0 mt-2 bg-slate-900 border border-slate-700/85 rounded-xl shadow-2xl overflow-hidden z-20"
               >
                 {weeks.map((w) => (
                   <button
