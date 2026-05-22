@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Check, Printer, Plus, X, FileText } from "lucide-react";
+import { ChevronLeft, ChevronRight, Check, Printer, Plus, X, FileText, Calendar } from "lucide-react";
 import type { Laboratory } from "../../types";
 import { DAYS_ORDER, DAY_NAMES, getCategoryStyles, getCheckedMaterials, saveCheckedMaterials } from "./utils";
 import type { DayCode } from "./utils";
@@ -9,6 +9,7 @@ import html2canvas from "html2canvas";
 interface TabOggiProps {
   laboratori: Laboratory[];
   selectedWeek: number;
+  setSelectedWeek: (week: number) => void;
   activeDay: DayCode;
   setActiveDay: (day: DayCode) => void;
 }
@@ -16,6 +17,7 @@ interface TabOggiProps {
 export const TabOggi: React.FC<TabOggiProps> = ({
   laboratori,
   selectedWeek,
+  setSelectedWeek,
   activeDay,
   setActiveDay,
 }) => {
@@ -110,8 +112,39 @@ export const TabOggi: React.FC<TabOggiProps> = ({
 
   return (
     <div className="flex flex-col flex-grow w-full pb-20 select-none">
+      {/* Week Selector Tab Row */}
+      <div className="px-4 py-2.5 bg-slate-900 border-b border-slate-800/80 sticky top-[48px] z-30 flex items-center justify-between gap-3">
+        <div className="flex items-center space-x-1.5 text-slate-400 text-xs font-extrabold uppercase tracking-wider shrink-0">
+          <Calendar size={14} className="text-[#D97706]" />
+          <span>Settimana</span>
+        </div>
+        <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-800/80 grow max-w-[240px] relative">
+          {[1, 2, 3, 4].map((w) => (
+            <button
+              key={w}
+              onClick={() => setSelectedWeek(w)}
+              className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all relative ${
+                selectedWeek === w
+                  ? "text-white font-extrabold"
+                  : "text-slate-400 active:bg-slate-900 hover:text-slate-200"
+              }`}
+            >
+              {selectedWeek === w && (
+                <motion.div
+                  layoutId="activeMobileWeek"
+                  className="absolute inset-0 bg-[#D97706] rounded-lg shadow-md shadow-[#D97706]/20"
+                  style={{ zIndex: 0 }}
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
+              )}
+              <span className="relative z-10">{w}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Day Selector */}
-      <div className="flex items-center justify-between px-4 py-3 bg-slate-800/80 border-b border-[#D97706]/10 sticky top-[48px] z-30 backdrop-blur-sm">
+      <div className="flex items-center justify-between px-4 py-3 bg-slate-800/80 border-b border-[#D97706]/10 sticky top-[96px] z-30 backdrop-blur-sm">
         <button
           onClick={() => handleDayChange("prev")}
           disabled={!hasPrev}
@@ -123,9 +156,14 @@ export const TabOggi: React.FC<TabOggiProps> = ({
           <ChevronLeft size={24} />
         </button>
 
-        <span className="text-[#D97706] text-lg font-bold tracking-wider uppercase">
-          {DAY_NAMES[activeDay]}
-        </span>
+        <div className="flex flex-col items-center">
+          <span className="text-[#D97706] text-lg font-black tracking-wider uppercase leading-none font-display">
+            {DAY_NAMES[activeDay]}
+          </span>
+          <span className="text-slate-400 text-[10px] font-bold tracking-widest uppercase mt-1">
+            Settimana {selectedWeek}
+          </span>
+        </div>
 
         <button
           onClick={() => handleDayChange("next")}

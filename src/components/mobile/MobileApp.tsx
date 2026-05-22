@@ -66,6 +66,7 @@ export const MobileApp: React.FC<MobileAppProps> = ({ laboratori, loading }) => 
                 <TabOggi
                   laboratori={laboratori}
                   selectedWeek={selectedWeek}
+                  setSelectedWeek={setSelectedWeek}
                   activeDay={activeDay}
                   setActiveDay={setActiveDay}
                 />
