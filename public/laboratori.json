@@ -4,13 +4,95 @@
     "nome": "Stendardo",
     "fascia": "elementari",
     "settimana": 1,
-    "giorno": "lun",
+    "giorno": "mar",
     "descrizione": "Disegnare uno stendardo per la squadra",
     "materiali": [
       "Cartellone",
       "Pennarelli"
     ],
     "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_035",
+    "nome": "Stendardo",
+    "fascia": "elementari",
+    "settimana": 1,
+    "giorno": "mer",
+    "descrizione": "Disegnare uno stendardo per la squadra",
+    "materiali": [
+      "Cartellone",
+      "Pennarelli"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_035",
+    "nome": "Stendardo",
+    "fascia": "elementari",
+    "settimana": 1,
+    "giorno": "gio",
+    "descrizione": "Disegnare uno stendardo per la squadra",
+    "materiali": [
+      "Cartellone",
+      "Pennarelli"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_006",
+    "nome": "Gita",
+    "fascia": "elementari",
+    "settimana": 1,
+    "giorno": "ven",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
+    "id": "lab_035",
+    "nome": "totem",
+    "fascia": "medie",
+    "settimana": 1,
+    "giorno": "mar",
+    "descrizione": "Decorare un totem per la propia squadra",
+    "materiali": [
+      "Totem di legno"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_035",
+    "nome": "totem",
+    "fascia": "medie",
+    "settimana": 1,
+    "giorno": "mer",
+    "descrizione": "Decorare un totem per la propia squadra",
+    "materiali": [
+      "Totem di legno"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_035",
+    "nome": "totem",
+    "fascia": "medie",
+    "settimana": 1,
+    "giorno": "gio",
+    "descrizione": "Decorare un totem per la propia squadra",
+    "materiali": [
+      "Totem di legno"
+    ],
+    "categoria": "Art & Craft"
+  },
+  {
+    "id": "lab_006",
+    "nome": "Gita",
+    "fascia": "medie",
+    "settimana": 1,
+    "giorno": "ven",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
   },
   {
     "id": "lab_001",
@@ -63,16 +145,6 @@
     "categoria": "Sport/Gioco"
   },
   {
-    "id": "lab_006",
-    "nome": "Gita",
-    "fascia": "elementari",
-    "settimana": 1,
-    "giorno": "ven",
-    "descrizione": "",
-    "materiali": [],
-    "categoria": "Sport/Gioco"
-  },
-  {
     "id": "lab_007",
     "nome": "Gita",
     "fascia": "elementari",
@@ -83,8 +155,8 @@
     "categoria": "Sport/Gioco"
   },
   {
-    "id": "lab_008",
-    "nome": "Torneo Finito",
+    "id": "lab_017",
+    "nome": "Gita",
     "fascia": "medie",
     "settimana": 2,
     "giorno": "lun",
@@ -93,8 +165,18 @@
     "categoria": "Sport/Gioco"
   },
   {
+    "id": "lab_008",
+    "nome": "Totem finish",
+    "fascia": "medie",
+    "settimana": 2,
+    "giorno": "mar",
+    "descrizione": "",
+    "materiali": [],
+    "categoria": "Sport/Gioco"
+  },
+  {
     "id": "lab_009",
-    "nome": "Torneo Finito",
+    "nome": "Stendardo finish ",
     "fascia": "elementari",
     "settimana": 2,
     "giorno": "mar",
@@ -252,11 +334,11 @@
   },
   {
     "id": "lab_022",
-    "nome": "Impostore",
+    "nome": "Lavoro Lucia",
     "fascia": "medie",
     "settimana": 3,
     "giorno": "mer",
-    "descrizione": "Dei bambini hanno la stessa parola e uno non la sa e tutti quelli che hanno la parola devono capire chi è l'impostore",
+    "descrizione": "",
     "materiali": [],
     "categoria": "Sport/Gioco"
   },
@@ -300,7 +382,7 @@
   },
   {
     "id": "lab_026",
-    "nome": "Nichi",
+    "nome": "Lavoretto per Michi",
     "fascia": "medie",
     "settimana": 3,
     "giorno": "ven",
