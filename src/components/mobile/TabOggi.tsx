@@ -111,7 +111,7 @@ export const TabOggi: React.FC<TabOggiProps> = ({
   };
 
   return (
-    <div className="flex flex-col flex-grow w-full pb-20 select-none">
+    <div className="flex flex-col flex-grow w-full select-none overflow-hidden">
       {/* Week Selector Tab Row */}
       <div className="px-4 py-2.5 bg-slate-900 border-b border-slate-800/80 sticky top-[48px] z-30 flex items-center justify-between gap-3">
         <div className="flex items-center space-x-1.5 text-slate-400 text-xs font-extrabold uppercase tracking-wider shrink-0">
@@ -183,7 +183,7 @@ export const TabOggi: React.FC<TabOggiProps> = ({
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.2}
         onDragEnd={handleDragEnd}
-        className="flex-grow flex flex-col p-4 overflow-y-auto cursor-grab active:cursor-grabbing"
+        className="flex-grow flex flex-col p-4 pb-24 overflow-y-auto cursor-grab active:cursor-grabbing"
       >
         <AnimatePresence mode="wait">
           <motion.div
