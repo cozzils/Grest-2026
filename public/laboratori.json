@@ -1,6 +1,6 @@
 [
   {
-    "id": "lab_035",
+    "id": "lab_035_ele_mar",
     "nome": "Stendardo",
     "fascia": "elementari",
     "settimana": 1,
@@ -13,7 +13,7 @@
     "categoria": "Art & Craft"
   },
   {
-    "id": "lab_035",
+    "id": "lab_035_ele_mer",
     "nome": "Stendardo",
     "fascia": "elementari",
     "settimana": 1,
@@ -26,7 +26,7 @@
     "categoria": "Art & Craft"
   },
   {
-    "id": "lab_035",
+    "id": "lab_035_ele_gio",
     "nome": "Stendardo",
     "fascia": "elementari",
     "settimana": 1,
@@ -39,7 +39,7 @@
     "categoria": "Art & Craft"
   },
   {
-    "id": "lab_006",
+    "id": "lab_006_ele_ven",
     "nome": "Gita",
     "fascia": "elementari",
     "settimana": 1,
@@ -49,7 +49,7 @@
     "categoria": "Sport/Gioco"
   },
   {
-    "id": "lab_035",
+    "id": "lab_035_med_mar",
     "nome": "totem",
     "fascia": "medie",
     "settimana": 1,
@@ -61,7 +61,7 @@
     "categoria": "Art & Craft"
   },
   {
-    "id": "lab_035",
+    "id": "lab_035_med_mer",
     "nome": "totem",
     "fascia": "medie",
     "settimana": 1,
@@ -73,7 +73,7 @@
     "categoria": "Art & Craft"
   },
   {
-    "id": "lab_035",
+    "id": "lab_035_med_gio",
     "nome": "totem",
     "fascia": "medie",
     "settimana": 1,
@@ -85,7 +85,7 @@
     "categoria": "Art & Craft"
   },
   {
-    "id": "lab_006",
+    "id": "lab_006_med_ven",
     "nome": "Gita",
     "fascia": "medie",
     "settimana": 1,
@@ -155,7 +155,7 @@
     "categoria": "Sport/Gioco"
   },
   {
-    "id": "lab_017",
+    "id": "lab_017_med_lun",
     "nome": "Gita",
     "fascia": "medie",
     "settimana": 2,
@@ -269,7 +269,7 @@
     "categoria": "Sport/Gioco"
   },
   {
-    "id": "lab_017",
+    "id": "lab_017_ele_lun",
     "nome": "Gita",
     "fascia": "elementari",
     "settimana": 3,

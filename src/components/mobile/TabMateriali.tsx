@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Check, Printer, RotateCcw, AlertTriangle } from "lucide-react";
+import { ChevronDown, Check, Printer, RotateCcw, AlertTriangle, Sparkles } from "lucide-react";
 import type { Laboratory } from "../../types";
 import { aggregateAllMaterials, getCheckedMaterials, saveCheckedMaterials } from "./utils";
 import type { MaterialItem } from "./utils";
 import html2canvas from "html2canvas";
+import confetti from "canvas-confetti";
 
 interface TabMaterialiProps {
   laboratori: Laboratory[];
@@ -95,34 +96,116 @@ export const TabMateriali: React.FC<TabMaterialiProps> = ({ laboratori }) => {
   const totalCount = materials.length;
   const readyCount = materials.filter((m) => m.checked).length;
   const progressPercent = totalCount > 0 ? (readyCount / totalCount) * 100 : 0;
+  const isComplete = totalCount > 0 && readyCount === totalCount;
+
+  // Fire confetti when all materials are ready
+  const prevCompleteRef = useRef(false);
+  useEffect(() => {
+    if (isComplete && !prevCompleteRef.current) {
+      // Big celebration!
+      const fire = (particleRatio: number, opts: confetti.Options) => {
+        confetti({
+          ...opts,
+          origin: { y: 0.7 },
+          particleCount: Math.floor(200 * particleRatio),
+          zIndex: 9999,
+        });
+      };
+      fire(0.25, { spread: 26, startVelocity: 55, colors: ["#D97706", "#FCD34D"] });
+      fire(0.2, { spread: 60, colors: ["#10B981", "#34D399"] });
+      fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8, colors: ["#8B5CF6", "#A78BFA"] });
+      fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2, colors: ["#FCD34D", "#D97706"] });
+      fire(0.1, { spread: 120, startVelocity: 45, colors: ["#10B981", "#D97706"] });
+    }
+    prevCompleteRef.current = isComplete;
+  }, [isComplete]);
 
   return (
     <div className="flex flex-col flex-grow w-full pb-20 select-none px-4 py-4 overflow-y-auto">
       {/* Target for screenshot export */}
       <div ref={printAreaRef} className="space-y-4">
         {/* Header and Progress Bar */}
-        <div className="bg-slate-800/90 rounded-2xl p-5 border border-slate-700/50 shadow-md">
-          <h2 className="text-white text-lg font-black uppercase tracking-wider">
-            Materiali Completi
-          </h2>
+        <motion.div
+          className="rounded-2xl p-5 border shadow-md relative overflow-hidden"
+          animate={{
+            borderColor: isComplete ? "rgba(16,185,129,0.4)" : "rgba(51,65,85,0.5)",
+            background: isComplete
+              ? "rgba(16,185,129,0.08)"
+              : "rgba(30,41,59,0.9)",
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* Celebration glow when complete */}
+          {isComplete && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(16,185,129,0.15) 0%, transparent 70%)",
+              }}
+            />
+          )}
+
+          <div className="flex items-center space-x-2">
+            <h2 className="text-white text-lg font-black uppercase tracking-wider">
+              Materiali Completi
+            </h2>
+            {isComplete && (
+              <motion.div
+                initial={{ scale: 0, rotate: -20 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ type: "spring", stiffness: 400, damping: 20 }}
+              >
+                <Sparkles size={20} className="text-emerald-400" />
+              </motion.div>
+            )}
+          </div>
+
           <div className="flex justify-between items-center mt-2.5">
-            <span className="text-[#D97706] text-sm font-bold">
+            <motion.span
+              className="text-sm font-bold"
+              animate={{ color: isComplete ? "#10b981" : "#D97706" }}
+              transition={{ duration: 0.4 }}
+            >
               ✓ {readyCount}/{totalCount} pronti
-            </span>
+            </motion.span>
             <span className="text-slate-400 text-xs font-semibold">
               {Math.round(progressPercent)}% completato
             </span>
           </div>
-          {/* Animated Progress Bar */}
+
+          {/* Premium Gradient Progress Bar */}
           <div className="w-full h-3 bg-slate-950 rounded-full mt-2.5 overflow-hidden border border-slate-800">
             <motion.div
-              className="h-full bg-gradient-to-r from-emerald-500 to-[#10B981]"
+              className="h-full rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${progressPercent}%` }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              style={{
+                background: isComplete
+                  ? "linear-gradient(90deg, #10b981, #34d399, #6ee7b7)"
+                  : `linear-gradient(90deg, #D97706 0%, #10B981 ${progressPercent}%, #10B981 100%)`,
+                boxShadow: isComplete
+                  ? "0 0 12px rgba(16,185,129,0.6), 0 0 4px rgba(16,185,129,0.4)"
+                  : progressPercent > 30
+                  ? "0 0 8px rgba(16,185,129,0.35)"
+                  : undefined,
+              }}
             />
           </div>
-        </div>
+
+          {isComplete && (
+            <motion.p
+              initial={{ opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-emerald-400 text-xs font-bold mt-2 text-center tracking-wide"
+            >
+              🎉 Tutti i materiali sono pronti!
+            </motion.p>
+          )}
+        </motion.div>
 
         {/* Categories Accordions */}
         <div className="space-y-3">
@@ -217,20 +300,24 @@ export const TabMateriali: React.FC<TabMaterialiProps> = ({ laboratori }) => {
 
       {/* Action Buttons */}
       <div className="flex space-x-3 mt-6">
-        <button
+        <motion.button
           onClick={() => setShowResetConfirm(true)}
-          className="flex-1 flex items-center justify-center space-x-2 border border-slate-700/80 active:bg-slate-800 text-slate-300 py-3.5 rounded-xl font-bold transition-all text-sm"
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 400, damping: 20 }}
+          className="flex-1 flex items-center justify-center space-x-2 border border-slate-700/80 active:bg-slate-800 text-slate-300 py-3.5 rounded-xl font-bold transition-colors text-sm"
         >
           <RotateCcw size={16} />
           <span>Resetta</span>
-        </button>
-        <button
+        </motion.button>
+        <motion.button
           onClick={handleExportList}
-          className="flex-1 flex items-center justify-center space-x-2 bg-[#D97706] active:bg-[#B45309] text-white py-3.5 rounded-xl font-bold shadow-lg shadow-[#D97706]/35 active:scale-95 transition-all text-sm"
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 400, damping: 20 }}
+          className="flex-1 flex items-center justify-center space-x-2 bg-[#D97706] text-white py-3.5 rounded-xl font-bold shadow-lg shadow-[#D97706]/35 text-sm"
         >
           <Printer size={16} />
           <span>Condividi</span>
-        </button>
+        </motion.button>
       </div>
 
       {/* Reset Confirmation Modal */}
